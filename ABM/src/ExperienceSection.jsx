@@ -11,9 +11,9 @@ const data = [
 
 function ExperienceSection() {
   return (
-    <div className="bg-gray-50 py-12">
+    <div className="bg-[--bg-color] py-12">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+        <h2 className="text-3xl font-bold text-center text-[--primary-color] mb-8">
           Industry Experience
         </h2>
         <ResponsiveContainer width="100%" height={400}>

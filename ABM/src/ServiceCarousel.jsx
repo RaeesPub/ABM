@@ -1,6 +1,6 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import "@splidejs/react-splide/css"; // Import SplideJS default styles
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const services = [
   {
@@ -32,32 +32,40 @@ const services = [
 
 const ServiceCarousel = () => {
   return (
-    <div className="max-w-7xl mx-auto py-12 px-4">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        Our <span className="text-blue-500">Services</span>
+
+    
+    <div className="max-w-full mx-auto py-12 px-4 bg-[--bg-color] shadow-inner- shadow-white">
+      <h2 className="text-3xl font-bold text-center mb-8 text-[--text-color]">
+        Our <span className="text-[--primary-color]">Services</span>
       </h2>
-      <Carousel
-        autoPlay
-        infiniteLoop
-        showThumbs={false}
-        showStatus={false}
-        interval={3000}
-        stopOnHover
-        transitionTime={500}
-        centerMode
-        centerSlidePercentage={33.33} // Show 3 cards (33.33% width for each)
+      <Splide
+        options={{
+          type: "loop",
+          perPage: 3,
+          perMove: 1,
+          autoplay: true,
+          interval: 3000,
+          gap: "1rem",
+          pauseOnHover: true,
+          pagination: false,
+          arrows: false,
+          breakpoints: {
+            1024: { perPage: 2 },
+            768: { perPage: 1 },
+          },
+        }}
+        className="overflow-hidden"
       >
         {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-gradient-to-r from-blue-50 via-white to-blue-50 shadow-md rounded-lg p-6 mx-4 flex flex-col items-center justify-center transform hover:scale-105 transition-transform"
-          >
-            <div className="text-6xl mb-4">{service.icon}</div>
-            <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-            <p className="text-gray-600">{service.description}</p>
-          </div>
+          <SplideSlide key={index}>
+            <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 shadow-md rounded-lg p-6 mx-4 flex flex-col items-center justify-center transform hover:scale-105 transition-transform">
+              <div className="text-6xl mb-4">{service.icon}</div>
+              <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+            </div>
+          </SplideSlide>
         ))}
-      </Carousel>
+      </Splide>
     </div>
   );
 };

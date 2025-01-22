@@ -20,7 +20,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="bg-blue-400 hover:bg-blue-500 text-white p-3 rounded-full transition"
+              className="bg-blue-400 hover:bg-[--primary-color] text-white p-3 rounded-full transition"
               aria-label="Twitter"
             >
               <FaTwitter />
@@ -59,7 +59,7 @@ const Footer = () => {
           </p>
           <a
             href="#"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-purple-500 via-blue-500 to-teal-400 text-white font-semibold rounded-lg shadow-md hover:from-purple-600 hover:to-teal-500 transition"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-purple-500 via-[--primary-color] to-teal-400 text-white font-semibold rounded-lg shadow-md hover:from-purple-600 hover:to-teal-500 transition"
           >
             Get Started
           </a>
