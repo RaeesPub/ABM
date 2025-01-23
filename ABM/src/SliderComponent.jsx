@@ -2,6 +2,7 @@ import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import './App.css';
 
 const SliderComponent = () => {
   const textItems = [
@@ -13,7 +14,7 @@ const SliderComponent = () => {
   ];
 
   return (
-    <div className="w-full bg-[--bg-color] shadow-md shadow-[--secondary-color] border-b-2 border-[--primary-color] py-4">
+    <div className="w-full bg-[--primary-color] shadow-md shadow-[--secondary-color] border-b-2 border-[--primary-color] py-4">
       <Splide
         options={{
           type: 'loop',
@@ -33,7 +34,7 @@ const SliderComponent = () => {
       >
         {textItems.map((text, index) => (
           <SplideSlide key={index}>
-              <div  className="text-center text-lg font-semibold text-[--primary-color]">  
+              <div style={{ fontFamily: "Aneo" }} className="text-center font-bold text-lg text-[--text-color]">  
               {text}
             </div>
           </SplideSlide>

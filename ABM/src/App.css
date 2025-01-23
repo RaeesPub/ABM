@@ -1,3 +1,25 @@
 body{
   background-color: #152343;
 }
+
+@font-face {
+  font-family: 'Berenika';
+  src: url('./assets/Klaudia and Berenika/Berenika/Berenika.ttf') format('truetype');
+  src: url('./assets/Klaudia and Berenika/Berenika/Berenika-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Klaudia';
+  src: url('./assets/Klaudia and Berenika/Berenika/Klaudia.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Aneo';
+  src: url('./assets/Fonts/Aneo/Aneo-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Wask';
+  src: url('./assets/Fonts/WASK/wask_new-webfont.eot') format('embedded-opentype'),
+  /* url('./assets/Fonts/WASK/wask_new-webfont.woff') format('woff'),
+  url('./assets/Fonts/WASK/wask_new-webfont.ttf') format('truetype'),
+  url('./assets/Fonts/WASK/wask_new-webfont.svg') format('svg'); */
+}
+

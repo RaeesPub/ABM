@@ -19,6 +19,7 @@ import Footer from "./footer";
 import ThemeSelectorWrapper from "./ThemeSelectorWrapper";
 import Slider from "./SliderComponent";
 import Navbar from "./Navbar";
+import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -107,31 +108,36 @@ function App() {
       <section
         ref={heroRef}
         id="home"
-        className="flex items-center w-full justify-between min-h-[85vh] bg-[gray-50]"
+        className=" flex items-center w-full justify-between min-h-[85vh] bg-[gray-50]"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundSize: "cover",
-          backdropFilter: "blur(3px)",
+          // backdropFilter: "blur(3px)",
         }}
       >
-        <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row lg:justify-between items-center">
+        <div className="container px-[6%] mx-auto flex flex-col lg:flex-row lg:justify-between items-center ">
           <div className="w-full lg:w-1/2 text-center lg:text-left">
+          <h1 className="text-3xl text-[--text-color] font-bold mb-4">
+            We are <span className="text-[--primary-color] font-bold font-[Lato]"> ABM </span>
+            </h1>
             <h1 className="text-4xl text-[--text-color] font-bold mb-4">
-              Hi, I'm a{" "}
-              <span className="text-[--primary-color]">
+              We specialize in{" "}
+              <span
+                className="text-[--primary-color] font-[Berenika] pb-2 border-b-4 border-[--primary-color] cursor-default"
+                >
                 <TypeAnimation
-                  sequence={["Designer", 1000, "Developer", 1000, "Editor", 1000]}
+                  sequence={["UI/UX", 1000, "Web Dev", 1000, "Logos", 1000, "Adds", 1000]}
                   wrapper="span"
                   cursor={true}
                   repeat={Infinity}
                 />
               </span>
             </h1>
-            <p className="text-[--text-color] text-xl mb-6 text-center lg:text-justify">
-              I create beautiful and functional web experiences. <br />
-              Let's build something amazing together.
+            <p className="text-[--text-color] text-wrap font-semibold text-xl mb-6 text-center lg:text-justify lg:tracking-wide leading-relaxed lg:leading-8">
+              We are a team of passionate designers and developers with skills in UI/UX design, Web development,
+              and Logo/Adds design. We can take your digital presence to the next level.
             </p>
-            <button className="px-6 py-3 bg-[--primary-color] text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
+            <button className="px-6 font-[Wask] py-3 bg-[--primary-color] text-white font-semibold rounded-lg shadow-md hover:bg-blue-600">
               Get in Touch
             </button>
           </div>
