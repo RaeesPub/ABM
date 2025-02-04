@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const ThemeSelector = () => {
   const [theme, setTheme] = useState('theme1');
-  const [bg, setBg] = useState('light');
+  const [bg, setBg] = useState('dark');
 
   const [customBgColor, setCustomBgColor] = useState('#ffffff');
   const [customTextColor, setCustomTextColor] = useState('#000000');
@@ -15,13 +15,15 @@ const ThemeSelector = () => {
         '--bg-color': '#ffffff',
         '--text-color': '#000000',
         '--primary-color': '#3de8d5',
-        '--secondary-color': '#152343',
+        '--secondary-color': '#f7dd72',
+        '--shadow-color': 'rgba(0, 0, 0, 0.3)',
       },
       dark: {
-        '--bg-color': '#0d1a26',
+        '--bg-color': '#152343',
         '--text-color': '#e0e0e0',
-        '--primary-color': '#20b2a9',
-        '--secondary-color': '#0e2a47',
+        '--primary-color': '#3de8d5', // Same as light
+        '--secondary-color': '#f7dd72', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.3)',
       },
     },
     theme2: {
@@ -30,12 +32,14 @@ const ThemeSelector = () => {
         '--text-color': '#333',
         '--primary-color': '#9b59b6',
         '--secondary-color': '#3498db',
+        '--shadow-color': 'rgba(0, 0, 0, 0.2)',
       },
       dark: {
         '--bg-color': '#1b2733',
-        '--text-color': '#dcdcdc',
-        '--primary-color': '#7d3c98',
-        '--secondary-color': '#1d4b70',
+        '--text-color': '#eeeeee',
+        '--primary-color': '#9b59b6', // Same as light
+        '--secondary-color': '#3498db', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.2)',
       },
     },
     theme3: {
@@ -44,12 +48,14 @@ const ThemeSelector = () => {
         '--text-color': '#2e2e2e',
         '--primary-color': '#ff6f61',
         '--secondary-color': '#374785',
+        '--shadow-color': 'rgba(0, 0, 0, 0.25)',
       },
       dark: {
         '--bg-color': '#181818',
         '--text-color': '#cfcfcf',
-        '--primary-color': '#e8505b',
-        '--secondary-color': '#1a3e59',
+        '--primary-color': '#ff6f61', // Same as light
+        '--secondary-color': '#374785', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.25)',
       },
     },
     theme4: {
@@ -58,12 +64,14 @@ const ThemeSelector = () => {
         '--text-color': '#222222',
         '--primary-color': '#1abc9c',
         '--secondary-color': '#2c3e50',
+        '--shadow-color': 'rgba(0, 0, 0, 0.3)',
       },
       dark: {
         '--bg-color': '#222831',
         '--text-color': '#eeeeee',
-        '--primary-color': '#10ac84',
-        '--secondary-color': '#34495e',
+        '--primary-color': '#1abc9c', // Same as light
+        '--secondary-color': '#2c3e50', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.3)',
       },
     },
     theme5: {
@@ -72,12 +80,14 @@ const ThemeSelector = () => {
         '--text-color': '#2f3640',
         '--primary-color': '#e67e22',
         '--secondary-color': '#2980b9',
+        '--shadow-color': 'rgba(0, 0, 0, 0.15)',
       },
       dark: {
         '--bg-color': '#121212',
         '--text-color': '#ecf0f1',
-        '--primary-color': '#d35400',
-        '--secondary-color': '#1a5276',
+        '--primary-color': '#e67e22', // Same as light
+        '--secondary-color': '#2980b9', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.15)',
       },
     },
     theme6: {
@@ -86,12 +96,14 @@ const ThemeSelector = () => {
         '--text-color': '#2c3e50',
         '--primary-color': '#ff7979',
         '--secondary-color': '#6ab04c',
+        '--shadow-color': 'rgba(0, 0, 0, 0.2)',
       },
       dark: {
         '--bg-color': '#2c3e50',
         '--text-color': '#ecf0f1',
-        '--primary-color': '#eb4d4b',
-        '--secondary-color': '#27ae60',
+        '--primary-color': '#ff7979', // Same as light
+        '--secondary-color': '#6ab04c', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.2)',
       },
     },
     theme7: {
@@ -100,12 +112,14 @@ const ThemeSelector = () => {
         '--text-color': '#3a3a3a',
         '--primary-color': '#3498db',
         '--secondary-color': '#8e44ad',
+        '--shadow-color': 'rgba(0, 0, 0, 0.25)',
       },
       dark: {
         '--bg-color': '#2d3436',
         '--text-color': '#dfe6e9',
-        '--primary-color': '#2980b9',
-        '--secondary-color': '#6c5ce7',
+        '--primary-color': '#3498db', // Same as light
+        '--secondary-color': '#8e44ad', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.25)',
       },
     },
     theme8: {
@@ -114,12 +128,14 @@ const ThemeSelector = () => {
         '--text-color': '#2d4059',
         '--primary-color': '#ff5722',
         '--secondary-color': '#607d8b',
+        '--shadow-color': 'rgba(0, 0, 0, 0.2)',
       },
       dark: {
         '--bg-color': '#1c1c1c',
         '--text-color': '#eeeeee',
-        '--primary-color': '#ff7043',
-        '--secondary-color': '#37474f',
+        '--primary-color': '#ff5722', // Same as light
+        '--secondary-color': '#607d8b', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.2)',
       },
     },
     theme9: {
@@ -128,12 +144,14 @@ const ThemeSelector = () => {
         '--text-color': '#1b262c',
         '--primary-color': '#0f4c75',
         '--secondary-color': '#3282b8',
+        '--shadow-color': 'rgba(0, 0, 0, 0.3)',
       },
       dark: {
         '--bg-color': '#1b262c',
         '--text-color': '#bbe1fa',
-        '--primary-color': '#3282b8',
-        '--secondary-color': '#0f4c75',
+        '--primary-color': '#0f4c75', // Same as light
+        '--secondary-color': '#3282b8', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.3)',
       },
     },
     theme10: {
@@ -142,12 +160,14 @@ const ThemeSelector = () => {
         '--text-color': '#343a40',
         '--primary-color': '#ff9f43',
         '--secondary-color': '#576574',
+        '--shadow-color': 'rgba(0, 0, 0, 0.25)',
       },
       dark: {
         '--bg-color': '#212529',
         '--text-color': '#ced4da',
-        '--primary-color': '#ffa502',
-        '--secondary-color': '#2f3542',
+        '--primary-color': '#ff9f43', // Same as light
+        '--secondary-color': '#576574', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.25)',
       },
     },
     theme11: {
@@ -156,12 +176,14 @@ const ThemeSelector = () => {
         '--text-color': '#4a4a4a',
         '--primary-color': '#8e44ad',
         '--secondary-color': '#34495e',
+        '--shadow-color': 'rgba(0, 0, 0, 0.2)',
       },
       dark: {
         '--bg-color': '#2f2f2f',
         '--text-color': '#ecf0f1',
-        '--primary-color': '#9b59b6',
-        '--secondary-color': '#2c3e50',
+        '--primary-color': '#8e44ad', // Same as light
+        '--secondary-color': '#34495e', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.2)',
       },
     },
     theme12: {
@@ -170,16 +192,17 @@ const ThemeSelector = () => {
         '--text-color': '#1c2833',
         '--primary-color': '#48c9b0',
         '--secondary-color': '#154360',
+        '--shadow-color': 'rgba(0, 0, 0, 0.3)',
       },
       dark: {
         '--bg-color': '#17202a',
         '--text-color': '#d5dbdb',
-        '--primary-color': '#16a085',
-        '--secondary-color': '#1b4f72',
+        '--primary-color': '#48c9b0', // Same as light
+        '--secondary-color': '#154360', // Same as light
+        '--shadow-color': 'rgba(255, 255, 255, 0.3)',
       },
     },
   };
-  
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
@@ -223,14 +246,14 @@ const ThemeSelector = () => {
   };
 
   return (
-    <div className="p-6  max-w-full h-3/4 flex flex-col mx-auto bg-white rounded-lg shadow-md">
-      <h2 className="text-lg font-semibold text-gray-700 mb-4 text-center sm:text-left">
+    <div className="p-6  max-w-full h-3/4 flex flex-col mx-auto bg-[--bg-color] rounded-lg shadow-md">
+      <h2 className="text-lg font-semibold text-[--text-color] mb-4 text-center sm:text-left">
         🎨 Theme Selector
       </h2>
   
       {/* Theme Selector */}
       <div className="mb-6">
-        <h3 className="text-md font-semibold text-gray-600 mb-2 text-center sm:text-left">
+        <h3 className="text-md font-semibold text-[--text-color] mb-2 text-center sm:text-left">
           Select a Theme:
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 justify-center overflow-y-auto max-h-[75vh]">
@@ -240,8 +263,8 @@ const ThemeSelector = () => {
       onClick={() => setTheme(themeName)}
       className={`py-2 px-4 rounded-md border-2 ${
         theme === themeName
-          ? 'border-blue-500 text-blue-500'
-          : 'border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-400'
+          ? 'border-[--primary-color] text-[--secondary-color]'
+          : 'border-gray-300 text-[--text-color] hover:border-[--primary-color] hover:text-[--secondary-color]'
       }`}
     >
       {themeName.charAt(0).toUpperCase() + themeName.slice(1)}
@@ -253,7 +276,7 @@ const ThemeSelector = () => {
   
       {/* Background Selector */}
       <div className="mb-6">
-        <h3 className="text-md font-semibold text-gray-600 mb-2 text-center sm:text-left">
+        <h3 className="text-md font-semibold text-[--text-color] mb-2 text-center sm:text-left">
           Select a Background:
         </h3>
         <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
@@ -263,8 +286,8 @@ const ThemeSelector = () => {
               onClick={() => setBg(option)}
               className={`py-2 px-4 rounded-md border-2 ${
                 bg === option
-                  ? 'border-green-500 text-green-500'
-                  : 'border-gray-300 text-gray-600 hover:border-green-400 hover:text-green-400'
+                  ? 'border-[--primary-color] text-[--secondary-color]'
+                  : 'border-gray-300 text-[--text-color] hover:border-[--primary-color] hover:text-[--secondary-color]'
               }`}
             >
               {option.charAt(0).toUpperCase() + option.slice(1)}
@@ -276,14 +299,14 @@ const ThemeSelector = () => {
       {/* Custom Colors */}
       {bg === 'custom' && (
         <div>
-          <h3 className="text-md font-semibold text-gray-600 mb-4 text-center sm:text-left">
+          <h3 className="text-md font-semibold text-[--text-color] mb-4 text-center sm:text-left">
             Customize Colors:
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label
                 htmlFor="customBgColor"
-                className="block text-sm font-medium text-gray-600"
+                className="block text-sm font-medium text-[--text-color]"
               >
                 Background Color:
               </label>
@@ -298,7 +321,7 @@ const ThemeSelector = () => {
             <div>
               <label
                 htmlFor="customTextColor"
-                className="block text-sm font-medium text-gray-600"
+                className="block text-sm font-medium text-[--text-color]"
               >
                 Text Color:
               </label>
@@ -313,7 +336,7 @@ const ThemeSelector = () => {
             <div>
               <label
                 htmlFor="customPrimaryColor"
-                className="block text-sm font-medium text-gray-600"
+                className="block text-sm font-medium text-[--text-color]"
               >
                 Primary Color:
               </label>
@@ -328,7 +351,7 @@ const ThemeSelector = () => {
             <div>
               <label
                 htmlFor="customSecondaryColor"
-                className="block text-sm font-medium text-gray-600"
+                className="block text-sm font-medium text-[--text-color]"
               >
                 Secondary Color:
               </label>
@@ -349,3 +372,5 @@ const ThemeSelector = () => {
 };
 
 export default ThemeSelector;
+
+

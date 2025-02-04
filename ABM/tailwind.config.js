@@ -6,13 +6,17 @@ export default {
   ],
   theme: {
     extend: {
-      backdropBlur: {
-        DEFAULT: '80px',
-        md: '100px',
-        lg: '300px',
-      },
+      // backdropBlur: {
+      //   DEFAULT: '80px',
+      //   md: '100px',
+      //   lg: '300px',
+      // },
     },
   },
   plugins: [
+    require('@tailwindcss/forms'),
   ],
+  corePlugins: {
+    backdropFilter: true,
+  }
 };
