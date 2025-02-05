@@ -31,10 +31,11 @@ export const TestimonialCarousel = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-[--bg-color] to-[--secondary-color] py-20 px-4">
+    <div className="bg-gradient-to-br from-[--primary-color] to-[--secondary-color] py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-[--text-color]">
-          What Our <span className="text-[--primary-color]">Clients Say</span>
+          What Our 
+          <span className="text-[--primary-color] -2 bg-clip-text" style={{ WebkitTextStroke: '0px white', color: 'var(--secondary-color)', WebkitTextFillColor: 'var(--secondary-color)' }}> Clients Say</span>
         </h2>
         
         <Splide

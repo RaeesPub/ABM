@@ -6,11 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      // backdropBlur: {
-      //   DEFAULT: '80px',
-      //   md: '100px',
-      //   lg: '300px',
-      // },
+      textShadow: {
+        'outline': '2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5)', // outline effect
+      }
     },
   },
   plugins: [

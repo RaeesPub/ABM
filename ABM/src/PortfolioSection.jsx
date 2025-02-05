@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +8,7 @@ import logo2 from './assets/project2.jpg';
 import logo3 from './assets/project3.jpg';
 import logo4 from './assets/project4.jpg';
 import logo5 from './assets/project5.jpg';
+import logo6  from './assets/project6.jpg';
 
 
 const PortfolioSection = () => {
@@ -33,7 +35,7 @@ const PortfolioSection = () => {
     }),
   };
 
-  const projects = [logo1, logo2, logo3, logo4, logo5]; // Array of imported images
+  const projects = [logo1, logo2, logo3, logo4, logo5, logo6]; // Array of imported images
 
   return (
     <motion.div 
@@ -93,7 +95,7 @@ const PortfolioSection = () => {
             >
               <div className="h-80 relative overflow-hidden">
                 <img
-                  src={image} // Use the imported image
+                  src={image}
                   alt={`Project ${index + 1}`}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -108,7 +110,7 @@ const PortfolioSection = () => {
                     A stunning digital solution that transformed client's business operations through innovative technology.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
-                    {['React', 'Tailwind', 'Node.js', 'AI'].map((tech, techIndex) => (
+                    {['Photoshop', 'Illustrator', 'Figma', 'AI'].map((tech, techIndex) => (
                       <span
                         key={techIndex}
                         className="px-3 py-1 text-sm rounded-full bg-[--primary-color/10] text-[--primary-color]"
@@ -126,7 +128,9 @@ const PortfolioSection = () => {
                   whileTap={{ scale: 0.9 }}
                   className="px-8 py-3 bg-white text-[--primary-color] rounded-full font-semibold flex items-center gap-2"
                 >
+                            <Link to="/projects">
                   View Project
+                    </Link>
                   <FontAwesomeIcon icon={faArrowRightLong} className="mt-1" />
                 </motion.button>
               </div>
@@ -140,13 +144,15 @@ const PortfolioSection = () => {
           transition={{ delay: 0.4 }}
           className="text-center mt-12"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-[--primary-color] text-white rounded-xl font-semibold hover:bg-[--secondary-color] transition-colors duration-300"
-          >
-            View All Projects
-          </motion.button>
+          <Link to="/projects">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-[--primary-color] text-white rounded-xl font-semibold hover:bg-[--secondary-color] transition-colors duration-300"
+            >
+              View All Projects
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </motion.div>

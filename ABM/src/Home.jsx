@@ -23,6 +23,7 @@ import AboutSection from "./AboutSection";
 import PortfolioSection from "./PortfolioSection";
 import { TestimonialCarousel, FAQSection } from './TestimonialFaq';
 import HeroSection from "./HeroSection";
+import TeamSection from "./TeamSection";
 
 function Home() {
   // Animation Variants
@@ -63,15 +64,18 @@ function Home() {
 
 
       {/* Stats Section */}
+
+      
                   <AboutSection />
-                  <Countup />
+                  <TeamSection />
 
                   <PortfolioSection />
+                  <Countup />
                   <TestimonialCarousel />
                   <FAQSection />
 
       {/* Milestones Section */}
-      <motion.div
+      {/* <motion.div
         className="bg-gradient-to-r from-[--primary-color] to-[--secondary-color] py-12 backdrop-blur-md"
         variants={fadeIn}
         initial="hidden"
@@ -118,7 +122,7 @@ function Home() {
             </motion.li>
           </ul>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Brands Section */}
       {/* <motion.div

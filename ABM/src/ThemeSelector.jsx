@@ -21,10 +21,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#152343',
         '--text-color': '#e0e0e0',
-        '--primary-color': '#3de8d5', // Same as light
-        '--secondary-color': '#f7dd72', // Same as light
+        '--primary-color': '#1ab3a3',
+        '--secondary-color': '#d4b73d',
         '--shadow-color': 'rgba(255, 255, 255, 0.3)',
-      },
+      }
     },
     theme2: {
       light: {
@@ -37,10 +37,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#1b2733',
         '--text-color': '#eeeeee',
-        '--primary-color': '#9b59b6', // Same as light
-        '--secondary-color': '#3498db', // Same as light
+        '--primary-color': '#7d3c98',
+        '--secondary-color': '#2474a6',
         '--shadow-color': 'rgba(255, 255, 255, 0.2)',
-      },
+      }
     },
     theme3: {
       light: {
@@ -53,10 +53,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#181818',
         '--text-color': '#cfcfcf',
-        '--primary-color': '#ff6f61', // Same as light
-        '--secondary-color': '#374785', // Same as light
+        '--primary-color': '#cc534b',
+        '--secondary-color': '#2a3659',
         '--shadow-color': 'rgba(255, 255, 255, 0.25)',
-      },
+      }
     },
     theme4: {
       light: {
@@ -69,10 +69,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#222831',
         '--text-color': '#eeeeee',
-        '--primary-color': '#1abc9c', // Same as light
-        '--secondary-color': '#2c3e50', // Same as light
+        '--primary-color': '#14967a',
+        '--secondary-color': '#233140',
         '--shadow-color': 'rgba(255, 255, 255, 0.3)',
-      },
+      }
     },
     theme5: {
       light: {
@@ -85,10 +85,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#121212',
         '--text-color': '#ecf0f1',
-        '--primary-color': '#e67e22', // Same as light
-        '--secondary-color': '#2980b9', // Same as light
+        '--primary-color': '#c45d0e',
+        '--secondary-color': '#1f5b84',
         '--shadow-color': 'rgba(255, 255, 255, 0.15)',
-      },
+      }
     },
     theme6: {
       light: {
@@ -101,10 +101,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#2c3e50',
         '--text-color': '#ecf0f1',
-        '--primary-color': '#ff7979', // Same as light
-        '--secondary-color': '#6ab04c', // Same as light
+        '--primary-color': '#cc6161',
+        '--secondary-color': '#4d8a3a',
         '--shadow-color': 'rgba(255, 255, 255, 0.2)',
-      },
+      }
     },
     theme7: {
       light: {
@@ -117,10 +117,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#2d3436',
         '--text-color': '#dfe6e9',
-        '--primary-color': '#3498db', // Same as light
-        '--secondary-color': '#8e44ad', // Same as light
+        '--primary-color': '#1e7ab5',
+        '--secondary-color': '#6a2d7a',
         '--shadow-color': 'rgba(255, 255, 255, 0.25)',
-      },
+      }
     },
     theme8: {
       light: {
@@ -133,10 +133,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#1c1c1c',
         '--text-color': '#eeeeee',
-        '--primary-color': '#ff5722', // Same as light
-        '--secondary-color': '#607d8b', // Same as light
+        '--primary-color': '#cc461a',
+        '--secondary-color': '#4d5c64',
         '--shadow-color': 'rgba(255, 255, 255, 0.2)',
-      },
+      }
     },
     theme9: {
       light: {
@@ -149,10 +149,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#1b262c',
         '--text-color': '#bbe1fa',
-        '--primary-color': '#0f4c75', // Same as light
-        '--secondary-color': '#3282b8', // Same as light
+        '--primary-color': '#0c3a5d',
+        '--secondary-color': '#1f5b84',
         '--shadow-color': 'rgba(255, 255, 255, 0.3)',
-      },
+      }
     },
     theme10: {
       light: {
@@ -165,10 +165,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#212529',
         '--text-color': '#ced4da',
-        '--primary-color': '#ff9f43', // Same as light
-        '--secondary-color': '#576574', // Same as light
+        '--primary-color': '#d6802a',
+        '--secondary-color': '#404b5a',
         '--shadow-color': 'rgba(255, 255, 255, 0.25)',
-      },
+      }
     },
     theme11: {
       light: {
@@ -181,10 +181,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#2f2f2f',
         '--text-color': '#ecf0f1',
-        '--primary-color': '#8e44ad', // Same as light
-        '--secondary-color': '#34495e', // Same as light
+        '--primary-color': '#6c3483',
+        '--secondary-color': '#2c3e50',
         '--shadow-color': 'rgba(255, 255, 255, 0.2)',
-      },
+      }
     },
     theme12: {
       light: {
@@ -197,10 +197,10 @@ const ThemeSelector = () => {
       dark: {
         '--bg-color': '#17202a',
         '--text-color': '#d5dbdb',
-        '--primary-color': '#48c9b0', // Same as light
-        '--secondary-color': '#154360', // Same as light
+        '--primary-color': '#309b8a',
+        '--secondary-color': '#0e2a3a',
         '--shadow-color': 'rgba(255, 255, 255, 0.3)',
-      },
+      }
     },
   };
 

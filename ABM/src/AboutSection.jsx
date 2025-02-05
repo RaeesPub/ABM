@@ -38,7 +38,7 @@ const AboutSection = () => {
         <img 
           src={ahmad} 
           alt="Our team working together"
-          className="w-full h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-[600px] mt-8 object-cover transform group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[--bg-color] via-transparent to-transparent" />
         <div className="absolute bottom-8 left-8 right-8 p-6 backdrop-blur-sm bg-[--bg-color/80] rounded-xl shadow-lg">
@@ -84,7 +84,7 @@ const AboutSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-8  px-8 py-4 bg-[--primary-color] text-[--text-color] rounded-xl font-semibold hover:bg-[--secondary-color] transition-colors duration-300"
+            className="mt-8  px-8 py-4 bg-[--primary-color] text-[--bg-color] rounded-xl font-bold hover:bg-[--secondary-color] transition-colors duration-300"
           >
             Explore Our Journey
           </motion.button>

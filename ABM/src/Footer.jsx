@@ -11,35 +11,35 @@ const SocialMediaLinks = () => {
   const socialLinks = [
     {
       icon: <FaFacebookF />,
-      address: "facebook.com/yourpage",
+      address: "facebook.com",
       color: "bg-blue-600 hover:bg-blue-700",
       borderColor: "border-blue-600",
       animation: { x: [-50, 0], opacity: [0, 1] }
     },
     {
       icon: <FaTwitter />,
-      address: "twitter.com/yourhandle",
+      address: "twitter.com",
       color: "bg-blue-400 hover:bg-blue-500",
       borderColor: "border-blue-400",
       animation: { y: [-50, 0], opacity: [0, 1] }
     },
     {
       icon: <FaInstagram />,
-      address: "instagram.com/yourprofile",
+      address: "instagram.com",
       color: "bg-pink-500 hover:bg-pink-600",
       borderColor: "border-pink-500",
       animation: { x: [50, 0], opacity: [0, 1] }
     },
     {
       icon: <FaLinkedinIn />,
-      address: "linkedin.com/yourcompany",
+      address: "linkedin.com",
       color: "bg-blue-700 hover:bg-blue-800",
       borderColor: "border-blue-700",
       animation: { y: [50, 0], opacity: [0, 1] }
     },
     {
       icon: <FaYoutube />,
-      address: "https://www.youtube.com",
+      address: "youtube.com",
       color: "bg-red-600 hover:bg-red-700",
       borderColor: "border-red-600",
       animation: { scale: [0.5, 1], opacity: [0, 1] }
@@ -48,10 +48,9 @@ const SocialMediaLinks = () => {
 
   return (
     <div className="bg-[--bg-color]  w-full mx-auto px-6 py-12">
-      <div className="flex flex-col gap-4 sm:flex-row justify-between">
-        {/* Social Media Links Section */}
+      <div className="flex md:flex-row flex-col gap-4  justify-between items-center">
         <motion.div 
-          className="flex flex-col space-y-4"
+          className="flex flex-row md:flex-col md:justify-start justify-center gap-4 items-center md:items-start flex-wrap space-y-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -69,7 +68,7 @@ const SocialMediaLinks = () => {
                 delay: index * 0.1,
                 duration: 0.5
               }}
-              className={`flex  items-center ${link.borderColor} hover:${link.color} cursor-pointer border-2 rounded-full space-x-4 group`}
+              className={`flex items-center w-44 pr-2 ${link.borderColor} hover:${link.color} cursor-pointer border-2 rounded-full space-x-4 group`}
             >
               <motion.a
                 href={link.address}
@@ -105,7 +104,7 @@ const SocialMediaLinks = () => {
 
         {/* Call to Action Section */}
         <motion.div
-          className="text-center md:text-right"
+          className="text-center md:text-right flex flex-col items-center md:items-end"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -113,18 +112,15 @@ const SocialMediaLinks = () => {
           <h3 className="text-3xl font-bold mb-6 text-[--text-color]">
             Let's Build Something Amazing Together
           </h3>
-          <p className="text-[--text-color/80%] mb-8 max-w-md md:ml-auto">
+          <p className="text-[--text-color] mb-8 max-w-md ">
             Join the revolution. Discover how we can help bring your ideas to life.
           </p>
           <motion.a
             href="#"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 via-[--primary-color] to-teal-400 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-[--primary-color]  to-[--secondary-color] text-[--bg-color] font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             whileHover={{ 
               scale: 1.05,
-              background: [
-                'linear-gradient(to right, #8b5cf6, var(--primary-color), #2dd4bf)',
-                'linear-gradient(to right, #7c3aed, var(--primary-color), #14b8a6)'
-              ],
+              
               transition: { duration: 0.5 }
             }}
           >

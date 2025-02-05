@@ -3,6 +3,7 @@ body{
   color: var(--text-color);
   transition: all 300ms;
   width: 100vw;
+  font-family: Mask2;
 }
 
 @font-face {
